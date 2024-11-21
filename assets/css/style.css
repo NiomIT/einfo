@@ -1,0 +1,39 @@
+.dropdown-menu {
+    max-width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.dropdown-item {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+}
+
+.badge {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+}
+
+.nav-item .nav-link i {
+    margin-right: 8px; /* Adds spacing between icon and text */
+}
+
+.nav-item .nav-link:hover {
+    color: #E02252; /* Change color on hover */
+}
+
+
+
+/* Active button style */
+button.active {
+  background-color: #007bff; /* Blue for Like */
+  color: white;
+}
+
+
+button.active.bg-danger {
+  background-color:white; /* Red for Dislike */
+  color:  #dc3545;
+}

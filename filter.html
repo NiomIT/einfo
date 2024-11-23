@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Dynamic Filters</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f4f6f9;
+    }
+    .filter-card {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    .form-select, .form-control {
+      min-width: 200px;
+      margin-right: 15px;
+    }
+    .hidden {
+      display: none;
+    }
+    .form-label {
+      font-weight: bold;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-control, .form-select {
+      border-radius: 8px;
+    }
+    .form-select:focus, .form-control:focus {
+      border-color: #111d5e;
+      box-shadow: 0 0 5px rgba(17, 29, 94, 0.3);
+    }
+    .section-title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #111d5e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+    <div class="filter-card mx-auto" style="max-width: 950px;">
+      <h4 class="section-title">Advanced Search Filters</h4>
+      <form class="d-flex align-items-start flex-wrap">
+        <!-- Country Filter -->
+        <div class="form-group">
+          <label for="countrySelect" class="form-label">Country</label>
+          <select id="countrySelect" class="form-select">
+            <option value="global" selected>Global</option>
+            <option value="bangladesh">Bangladesh</option>
+          </select>
+          <div id="cityField" class="hidden mt-3">
+            <label for="citySelect" class="form-label">City</label>
+            <select id="citySelect" class="form-select">
+              <option value="dhaka">Dhaka</option>
+              <option value="chittagong">Chittagong</option>
+              <option value="khulna">Khulna</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Post Type Filter -->
+        <div class="form-group">
+          <label for="postType" class="form-label">Post Type</label>
+          <select  id="postType" class="form-select">
+            <option value="dhaka">Technology</option>
+            <option value="chittagong">Education</option>
+            <option value="khulna">Health</option>
+          </select>
+          <div id="postCategoryField" class="hidden mt-3">
+            <label for="postCategorySelect" class="form-label">Post Category</label>
+            <select id="postCategorySelect" class="form-select">
+              <option value="technology">Book</option>
+              <option value="education">Laptop</option>
+              <option value="health">Medicin</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Year Filter -->
+        <div class="form-group">
+          <label for="yearSelect" class="form-label">Year</label>
+          <select id="yearSelect" class="form-select">
+            <option value="" selected>Select Year</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+          </select>
+          <div id="monthField" class="hidden mt-3">
+            <label for="monthSelect" class="form-label">Month</label>
+            <select id="monthSelect" class="form-select">
+              <option value="january">January</option>
+              <option value="february">February</option>
+              <option value="march">March</option>
+              <option value="april">April</option>
+              <option value="may">May</option>
+              <option value="june">June</option>
+              <option value="july">July</option>
+              <option value="august">August</option>
+              <option value="september">September</option>
+              <option value="october">October</option>
+              <option value="november">November</option>
+              <option value="december">December</option>
+            </select>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JavaScript for Dynamic Fields -->
+  <script>
+    const countrySelect = document.getElementById('countrySelect');
+    const cityField = document.getElementById('cityField');
+
+    const postType = document.getElementById('postType');
+    const postCategoryField = document.getElementById('postCategoryField');
+
+    const yearSelect = document.getElementById('yearSelect');
+    const monthField = document.getElementById('monthField');
+
+    // Show/Hide City Field based on Country Selection
+    countrySelect.addEventListener('change', () => {
+      if (countrySelect.value === 'bangladesh') {
+        cityField.classList.remove('hidden');
+      } else {
+        cityField.classList.add('hidden');
+      }
+    });
+
+    // Show/Hide Post Category Field based on Post Type Input
+    postType.addEventListener('input', () => {
+      if (postType.value.trim() !== '') {
+        postCategoryField.classList.remove('hidden');
+      } else {
+        postCategoryField.classList.add('hidden');
+      }
+    });
+
+    // Show/Hide Month Field based on Year Selection
+    yearSelect.addEventListener('change', () => {
+      if (yearSelect.value !== '') {
+        monthField.classList.remove('hidden');
+      } else {
+        monthField.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

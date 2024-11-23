@@ -37,3 +37,195 @@ button.active.bg-danger {
   background-color:white; /* Red for Dislike */
   color:  #dc3545;
 }
+
+/* login form er jonne nicher code  */
+   .login-card {
+      max-width: 400px;
+      margin: 50px auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    .login-btn {
+      background-color: #E02252;
+      color: #fff;
+    }
+    .login-btn:hover {
+      background-color: #C01E48;
+    }
+    .input-group-text {
+      cursor: pointer;
+    }
+
+    /* code for register form  */
+
+    .register-card {
+        max-width: 500px;
+        margin: 50px auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+      .register-btn {
+        background-color: #111D5E;
+        color: #fff;
+      }
+      .register-btn:hover {
+        background-color: #0E1645;
+      }
+      .input-group-text {
+        cursor: pointer;
+      }
+
+      /* code for otp page */
+      .otp-card {
+        max-width: 500px;
+        margin: 50px auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+      .send-btn {
+        background-color: #111D5E;
+        color: #fff;
+      }
+      .send-btn:hover {
+        background-color: #0E1645;
+      }
+
+      /* code for otp verify */
+    
+      .verify-btn {
+        background-color: #111D5E;
+        color: #fff;
+      }
+      .verify-btn:hover {
+        background-color: #0E1645;
+      }
+
+      /* code for profile page */
+
+   
+    body {
+      background-color: #f8f9fa;
+    }
+    .profile-container {
+      display: flex;
+      flex-wrap: nowrap;
+      margin: 30px auto;
+      max-width: 1000px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .profile-sidebar {
+      background-color: #111d5e;
+      color: #fff;
+      padding: 20px;
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .profile-sidebar img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 3px solid #e02252;
+    }
+    .profile-sidebar h5 {
+      margin-bottom: 5px;
+    }
+    .profile-sidebar p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    .profile-sidebar ul {
+      list-style: none;
+      padding: 0;
+      width: 100%;
+    }
+    .profile-sidebar ul li {
+      margin: 10px 0;
+    }
+    .profile-sidebar ul li a {
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    .profile-sidebar ul li a:hover {
+      background-color: #e02252;
+    }
+    .profile-content {
+      flex: 1;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+    .profile-header {
+      border-bottom: 2px solid #f0f0f0;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+    }
+    .profile-header h3 {
+      margin: 0;
+    }
+    .profile-details label {
+      font-weight: bold;
+    }
+    .edit-btn {
+      color: #fff;
+      background-color: #e02252;
+      border: none;
+    }
+    .edit-btn:hover {
+      background-color: #c01d46;
+    }
+/* code for profile edit page */
+
+  .edit-profile-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  .form-label {
+    font-weight: bold;
+  }
+  .form-control:focus {
+    border-color: #e02252;
+    box-shadow: 0 0 5px rgba(224, 34, 82, 0.5);
+  }
+  .save-btn {
+    background-color: #e02252;
+    color: white;
+    border: none;
+  }
+  .save-btn:hover {
+    background-color: #c01d46;
+  }
+  .cancel-btn {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+  }
+  .cancel-btn:hover {
+    background-color: #5a6268;
+  }
+
+  /* comment section show */
+
+  .comment-section {
+    display: none; /* Initially hidden */
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Smooth fade transition */
+  }

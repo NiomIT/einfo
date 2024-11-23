@@ -229,3 +229,13 @@ button.active.bg-danger {
     opacity: 0;
     transition: opacity 0.5s ease-in-out; /* Smooth fade transition */
   }
+
+
+  /* signup image */
+
+  #imagePreview img {
+    width: 150px;  /* Square size */
+    height: 150px; /* Square size */
+    object-fit: cover; /* Ensures the image covers the square area */
+    border-radius: 8px; /* Optional, if you want rounded corners */
+}

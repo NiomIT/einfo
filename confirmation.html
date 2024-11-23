@@ -152,23 +152,22 @@
   <div class="container">
     <div class="card otp-card p-4">
       <div class="card-body">
-        <h3 class="text-center mb-4">Send OTP</h3>
-        <form action="otp-verification.html" method="GET">
-          <!-- Country Code and Phone Number -->
+        <h3 class="text-center mb-4">Confirmation Code</h3>
+        <form action="success.html" method="POST">
+          <!-- OTP Input -->
           <div class="mb-3">
-            <label for="phoneNumber" class="form-label">Phone Number</label>
+            <label for="otpCode" class="form-label">Enter OTP</label>
             <div class="input-group">
-              <select id="countryCode" class="form-select" style="max-width: 120px;" required>
-                <option value="+1">+1 (US)</option>
-                <option value="+44">+44 (UK)</option>
-                <option value="+91">+91 (India)</option>
-                <option value="+880">+880 (Bangladesh)</option>
-              </select>
-              <input type="text" class="form-control" id="phoneNumber" name="phone" placeholder="Enter your phone number" required>
+              <span class="input-group-text"><i class="fas fa-key"></i></span>
+              <input type="text" class="form-control" id="otpCode" name="otp" placeholder="Enter OTP" maxlength="6" required>
             </div>
           </div>
-          <!-- Send OTP Button -->
-          <button type="submit" class="btn-dark send-btn w-100">Send OTP</button>
+          <!-- Verify Button -->
+          <button type="submit" class="btn-dark verify-btn w-100">Confirm</button>
+          <!-- Resend OTP Link -->
+          <div class="text-center mt-3">
+            <p>Didn't receive the OTP? <a href="#" class="text-decoration-none">Resend OT (3)</a></p>
+          </div>
         </form>
       </div>
     </div>
